@@ -1,0 +1,93 @@
+<section class="extranet-section">
+  <div class="extranet-container">
+
+    <!-- Panel Izquierdo: Formulario -->
+    <div class="login-panel">
+      <div class="login-content">
+
+        <!-- Logo -->
+        <div class="login-logo">
+          <img src="assets/images/logo.png" alt="MAAJIKIDS Logo">
+          <h2>MAAJIKIDS</h2>
+          <p>Extranet</p>
+        </div>
+
+        <!-- Formulario de Login -->
+        <form class="login-form" (ngSubmit)="onLogin()">
+
+          <!-- Campo Usuario -->
+          <div class="form-group">
+            <div class="input-wrapper">
+              <i class="fas fa-user input-icon"></i>
+              <input
+                type="text"
+                placeholder="Usuario"
+                [(ngModel)]="username"
+                name="username"
+                required
+                class="form-input">
+            </div>
+          </div>
+
+          <!-- Campo Contraseña -->
+          <div class="form-group">
+            <div class="input-wrapper">
+              <i class="fas fa-lock input-icon"></i>
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                placeholder="Contraseña"
+                [(ngModel)]="password"
+                name="password"
+                required
+                class="form-input">
+              <button
+                type="button"
+                class="toggle-password"
+                (click)="showPassword = !showPassword">
+                <i class="fas" [class.fa-eye]="!showPassword" [class.fa-eye-slash]="showPassword"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Botón Ingresar -->
+          <button type="submit" class="btn-login">
+            INGRESAR
+            <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <!-- Link Olvidé contraseña -->
+          <a href="#" class="forgot-password">
+            Olvidó su contraseña
+          </a>
+
+        </form>
+
+        <!-- Texto legal -->
+        <div class="legal-text">
+          <p>
+            En cumplimiento de la Ley N°29733, Ley de Protección de Datos Personales,
+            el usuario otorga su consentimiento - mediante el ingreso y/o uso del
+            presente portal - para el tratamiento de los datos personales.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Panel Derecho: Imagen -->
+    <div class="image-panel">
+      <div class="image-container">
+        <img src="assets/images/extranet/login-bg.jpg"
+             alt="MAAJIKIDS Extranet"
+             onerror="this.src='https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800'">
+
+        <!-- Logo aniversario (opcional)
+        <div class="anniversary-badge">
+          <div class="badge-number">25</div>
+          <div class="badge-text">Años<br>Sieweb</div>
+        </div>-->
+      </div>
+    </div>
+
+  </div>
+</section>

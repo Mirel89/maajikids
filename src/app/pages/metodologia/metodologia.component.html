@@ -1,0 +1,79 @@
+<section class="metodologia-section">
+  <div class="container">
+    <div class="metodologia-grid">
+
+      <!-- Columna Izquierda: Texto -->
+      <div class="metodologia-content">
+        <h1 class="page-title">Metodología Educativa</h1>
+
+        <div class="content-text">
+          <p>
+            Ofrecemos una moderna propuesta educativa para niños y niñas de 2 meses,a tres años y medio, basada en una metodología activa que ubica al alumno
+            como protagonista, motiva el aprendizaje, propicia la participación y busca
+            el desarrollo de sus capacidades sociales, motoras y comunicativas,
+            permitiendo a cada niño, descubrir su potencial y ponerlo en marcha.
+          </p>
+
+          <p>
+            Fomenta el trabajo cooperativo a través de proyectos de aprendizajes,
+            unidades didácticas y talleres. Al mismo tiempo proponemos experiencias
+            significativas que posibilitan actividades lúdicas, motoras y exploración
+            sensorial para estimular los procesos mentales para un buen desarrollo
+            de las capacidades y competencias.
+          </p>
+        </div>
+
+        <!-- Características adicionales -->
+        <div class="metodologia-features">
+          <div class="feature-item">
+            <div class="feature-icon">🎯</div>
+            <h3>Aprendizaje Activo</h3>
+            <p>El niño es el protagonista de su propio aprendizaje</p>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">🤝</div>
+            <h3>Trabajo Cooperativo</h3>
+            <p>Fomentamos la colaboración y el trabajo en equipo</p>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">🎨</div>
+            <h3>Exploración Sensorial</h3>
+            <p>Actividades lúdicas y motoras para el desarrollo integral</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Imagen/Carrusel -->
+      <div class="metodologia-gallery">
+        <div class="gallery-container">
+          <button class="gallery-arrow prev" (click)="prevImage()">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="gallery-slides">
+            <div class="gallery-slide" *ngFor="let image of images; let i = index"
+                 [class.active]="i === currentImageIndex">
+              <img [src]="image.src" [alt]="image.alt">
+            </div>
+          </div>
+
+          <button class="gallery-arrow next" (click)="nextImage()">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Indicadores -->
+        <div class="gallery-dots">
+          <span *ngFor="let dot of images; let i = index"
+                class="dot"
+                [class.active]="i === currentImageIndex"
+                (click)="goToImage(i)">
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

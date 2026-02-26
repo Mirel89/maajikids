@@ -1,0 +1,55 @@
+<section class="workshops-section">
+  <!-- Elementos decorativos -->
+  <div class="decoration sun">☀️</div>
+  <div class="decoration rocket">🚀</div>
+  <div class="decoration crab">🦀</div>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="workshops-header">
+      <h3 class="section-subtitle">NUESTROS</h3>
+      <h2 class="section-title">Talleres</h2>
+      <p class="section-description">
+        Kinder Star Learning ofrece estrategias para construir relaciones positivas,
+        ayudar a los niños(as) a desarrollar la autorregulación y responder a
+        conductas desafiantes.
+      </p>
+      <div class="bee">🐝</div>
+    </div>
+
+    <!-- Imagen central del niño -->
+    <div class="center-image">
+      <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400" alt="Niño explorando">
+      <div class="toys">
+        <span class="toy">🚗</span>
+        <span class="toy">🚚</span>
+        <span class="toy">🚜</span>
+      </div>
+    </div>
+
+    <!-- Talleres -->
+    <div class="workshops-grid">
+      <div
+        class="workshop-item"
+        *ngFor="let workshop of workshops; let i = index"
+        [class.position-left]="workshop.position === 'left'"
+        [class.position-right]="workshop.position === 'right'">
+
+        <div class="workshop-content" [class.reverse]="workshop.position === 'right'">
+          <div class="workshop-text">
+            <h3>{{ workshop.title }}</h3>
+            <p>{{ workshop.description }}</p>
+          </div>
+          <div class="workshop-icon" [style.background-color]="workshop.color">
+            <span class="icon-emoji">{{ workshop.icon }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón Ver Más -->
+    <div class="see-more">
+      <button class="btn-see-more">Ver Mas Talleres</button>
+    </div>
+  </div>
+</section>

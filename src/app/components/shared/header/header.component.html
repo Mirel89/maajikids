@@ -1,0 +1,58 @@
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-content">
+      <!-- Redes Sociales (Izquierda) -->
+      <div class="social-links">
+        <a href="https://facebook.com/maajikids" target="_blank" class="social-icon" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com/maajikids" target="_blank" class="social-icon" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+         <a href="https://tiktok.com/maajikids" target="_blank" class="social-icon" title="Tiktok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://wa.me/51960874371" target="_blank" class="social-icon" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <!-- Extranet (Derecha) -->
+      <div class="top-bar-actions">
+
+        <!-- Botón Extranet -->
+        <a routerLink="/extranet" class="btn-extranet">
+          <i class="fas fa-user-shield"></i>
+          <span>Extranet</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar Principal  -->
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="MAAJIKIDS Logo">
+      <div class="logo-text-container">
+        <span class="logo-main">Maajikids</span>
+
+      </div>
+    </div>
+
+    <ul class="nav-menu" [class.active]="menuOpen">
+      <li><a routerLink="/" routerLinkActive="active">Inicio</a></li>
+      <li><a routerLink="/prekinder" routerLinkActive="active">Pre-Kinder</a></li>
+      <li><a routerLink="/metodologia" routerLinkActive="active">Metodología</a></li>
+      <li><a routerLink="/talleres" routerLinkActive="active">Talleres</a></li>
+      <li><a routerLink="/admision" routerLinkActive="active">Admisión 2026</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="active">Contáctenos</a></li>
+    </ul>
+
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>

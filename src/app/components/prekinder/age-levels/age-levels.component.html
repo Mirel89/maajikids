@@ -1,0 +1,25 @@
+<section class="age-levels">
+  <div class="container">
+    <h2 class="section-subtitle">PRIMEROS AÑOS</h2>
+    <h2 class="section-title">Prekinder 2 y 3 Años</h2>
+
+    <p class="mission-text">
+      Nuestra misión es empoderar a nuestros estudiantes para que
+      persistan en su pasión por el aprendizaje, lleven una vida basada
+      en la integridad personal y creen soluciones socialmente responsables.
+    </p>
+
+    <div class="levels-grid">
+      <div
+        class="level-card"
+        *ngFor="let level of levels"
+        [style.background-color]="level.color">
+        <div class="circle-image">
+          <img [src]="level.image" [alt]="level.age">
+        </div>
+        <h3>{{ level.age }}</h3>
+        <p>{{ level.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

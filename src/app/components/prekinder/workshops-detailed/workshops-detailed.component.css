@@ -1,0 +1,112 @@
+.workshops-detailed {
+  padding: 80px 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.workshop-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.workshop-container.reverse {
+  direction: rtl;
+}
+
+.workshop-container.reverse > * {
+  direction: ltr;
+}
+
+/* Texto */
+.workshop-text-content {
+  padding: 20px;
+}
+
+.workshop-title {
+  margin-bottom: 25px;
+  display: block;
+}
+
+.title-main {
+  color: var(--primary);
+  font-size: 32px;
+  font-weight: bold;
+  display: block;
+}
+
+.title-sub {
+  color: var(--primary);
+  font-size: 28px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.workshop-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-dark);
+  text-align: justify;
+}
+
+/* Imagen */
+.workshop-image-content {
+  position: relative;
+}
+
+.image-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .workshop-container,
+  .workshop-container.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 30px;
+  }
+
+  .workshop-container.reverse > * {
+    direction: ltr;
+  }
+
+  .title-main {
+    font-size: 26px;
+  }
+
+  .title-sub {
+    font-size: 22px;
+    display: block;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .image-wrapper img {
+    height: 300px;
+  }
+
+  .workshop-container {
+    margin-bottom: 50px;
+  }
+}

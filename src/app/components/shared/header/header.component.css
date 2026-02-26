@@ -1,0 +1,282 @@
+/* ===== TOP BAR (NUEVO) ===== */
+.top-bar {
+  background: linear-gradient(135deg, #00838f 0%, #00bcd4 100%);
+  color: white;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.top-bar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Redes Sociales */
+.social-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icon {
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: white;
+  color: #00bcd4;
+  transform: translateY(-3px);
+}
+
+/* Acciones (Idioma + Extranet) */
+.top-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Selector de Idioma */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.lang-option {
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.lang-option:hover,
+.lang-option.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lang-divider {
+  opacity: 0.5;
+}
+
+/* Botón Extranet */
+.btn-extranet {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-extranet:hover {
+  background: white;
+  color: #00bcd4;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-extranet i {
+  font-size: 16px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== TU LOGO (EXISTENTE) ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 70px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.logo-main {
+  font-size: 24px;
+  font-weight: bold;
+  color: hsl(303, 82%, 40%);
+  display: block;
+}
+
+.logo-sub {
+  font-size: 20px;
+  font-weight: 600;
+  color: hsl(303, 82%, 40%);
+  display: block;
+  margin-top: -5px;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #00bcd4;
+  background: #f0f9ff;
+}
+
+/* Botón menú móvil */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 968px) {
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-menu li a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Top Bar en móvil */
+  .top-bar {
+    padding: 8px 0;
+  }
+
+  .top-bar-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .language-selector {
+    display: none;
+  }
+
+  .btn-extranet span {
+    display: none;
+  }
+
+  .btn-extranet {
+    padding: 8px 12px;
+  }
+
+  /* Menú móvil */
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: none;
+    gap: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li a {
+    padding: 12px 15px;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .logo img {
+    width: 55px;
+    height: 50px;
+  }
+
+  .logo-main {
+    font-size: 20px;
+  }
+
+  .logo-sub {
+    font-size: 16px;
+  }
+}

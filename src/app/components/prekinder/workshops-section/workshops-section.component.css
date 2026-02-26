@@ -1,0 +1,227 @@
+.workshops-section {
+  padding: 100px 0;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Elementos decorativos */
+.decoration {
+  position: absolute;
+  font-size: 80px;
+  opacity: 0.6;
+  animation: float 3s ease-in-out infinite;
+}
+
+.sun {
+  top: 20px;
+  left: 50px;
+  animation-delay: 0s;
+}
+
+.rocket {
+  top: 20px;
+  right: 50px;
+  animation-delay: 0.5s;
+}
+
+.crab {
+  bottom: 200px;
+  left: 20px;
+  font-size: 60px;
+  animation-delay: 1s;
+}
+
+/* Header */
+.workshops-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-subtitle {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: var(--primary);
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.section-description {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+.bee {
+  font-size: 30px;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+/* Imagen central */
+.center-image {
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.center-image img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.toys {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.toy {
+  font-size: 40px;
+  animation: bounce 0.5s ease-in-out infinite;
+}
+
+.toy:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.toy:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Grid de talleres */
+.workshops-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 80px;
+}
+
+.workshop-item {
+  width: 100%;
+}
+
+.workshop-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.workshop-content.reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.workshop-text {
+  flex: 1;
+}
+
+.workshop-text h3 {
+  color: var(--primary);
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.workshop-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.workshop-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.icon-emoji {
+  font-size: 50px;
+}
+
+/* Botón Ver Más */
+.see-more {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.btn-see-more {
+  background: var(--primary);
+  color: white;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-see-more:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 188, 212, 0.3);
+}
+
+/* Animaciones */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+
+  .workshop-content,
+  .workshop-content.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .decoration {
+    display: none;
+  }
+
+  .center-image img {
+    max-width: 300px;
+  }
+}

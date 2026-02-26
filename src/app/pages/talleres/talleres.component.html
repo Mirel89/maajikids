@@ -1,0 +1,81 @@
+<section class="talleres-section">
+  <div class="container">
+
+    <!-- Vista de Lista -->
+    <div *ngIf="!selectedWorkshop" class="workshops-list-view">
+
+      <!-- Grid: Contenido + Imagen -->
+      <div class="workshops-grid">
+
+        <!-- Columna Izquierda: Información -->
+        <div class="workshops-content">
+          <!-- Header -->
+          <div class="workshops-header">
+            <h1 class="page-title">Programa de estimulación a tu lado mamá</h1>
+            <p class="page-description">
+              En MAAJIKIDS acompañamos el desarrollo de tu peque con 5 aulas de estimulación temprana, creadas según su edad y momento de crecimiento 💛
+            </p>
+            <p>👶🏻➡️✨ Desde los primeros meses hasta los 3 años y medio.</p>
+            <p>✔️ Programas diseñados por edad.</p>
+            <p>✔️ Actividades guiadas por especialistas.</p>
+            <p>✔️ Espacios seguros, cómodos y pensados para bebés.</p>
+            <p>📍 San Juan de Lurigancho.</p>
+            <p>📲 Escríbenos y agenda una clase modelo.</p>
+          </div>
+
+          <!-- Lista de Talleres -->
+          <div class="workshops-list">
+            <div
+              class="workshop-item"
+              *ngFor="let workshop of workshops"
+              (click)="selectWorkshop(workshop)">
+
+              <div class="workshop-icon">{{ workshop.icon }}</div>
+              <div class="workshop-info">
+                <h3>{{ workshop.title }}</h3>
+                <p>{{ workshop.description }}</p>
+              </div>
+              <div class="workshop-arrow">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Imagen -->
+        <div class="workshops-image">
+          <div class="image-wrapper">
+            <img src="assets/images/talleres/estimulacion-temprana.jpg"
+                 alt="Estimulación temprana MAAJIKIDS"
+                 onerror="this.src='https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600'">
+
+            <!-- Decoraciones opcionales -->
+            <div class="decoration heart">💛</div>
+            <div class="decoration star">⭐</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Vista Detallada -->
+    <div *ngIf="selectedWorkshop" class="workshop-detail-view">
+      <!-- Botón volver -->
+      <button class="btn-back" (click)="goBackToList()">
+        <i class="fas fa-arrow-left"></i> Volver
+      </button>
+
+      <div class="workshop-detail">
+        <div class="detail-content">
+          <h2 class="detail-title">{{ selectedWorkshop.title }}</h2>
+          <p class="detail-description">{{ selectedWorkshop.fullDescription }}</p>
+        </div>
+        <div class="detail-image">
+          <img [src]="selectedWorkshop.image" [alt]="selectedWorkshop.title"
+               onerror="this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600'">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

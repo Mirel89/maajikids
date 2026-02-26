@@ -1,0 +1,58 @@
+<section class="admission-section">
+  <div class="container">
+
+    <!-- Header con Video -->
+    <div class="admision-header">
+      <div class="header-content">
+        <h2 class="header-subtitle">PROCESO DE ADMISIÓN 2026</h2>
+        <h1 class="header-title">¡Ven y forma parte de la familia MAAJIKIDS!</h1>
+        <p class="header-description">Educación de Calidad para tu hijo/a 🐝</p>
+      </div>
+
+      <div class="header-video">
+        <video controls poster="assets/images/admision/poster.jpg">
+          <source src="assets/videos/admision-2026.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+    </div>
+
+    <!-- Dos Columnas: Requisitos y Formularios -->
+    <div class="admision-content">
+
+      <!-- Columna 1: Requisitos -->
+      <div class="requirements-section">
+        <h2 class="section-title">Requisitos de Ingreso</h2>
+
+        <div class="requirements-list">
+          <div class="requirement-item" *ngFor="let req of requisitos">
+            <div class="check-icon">✓</div>
+            <span>{{ req }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna 2: Formularios -->
+      <div class="forms-section">
+        <h2 class="section-title">Formularios</h2>
+        <p class="forms-description">Haga clic en cada formato para descargar.</p>
+
+        <div class="forms-list">
+          <div class="form-item" *ngFor="let form of formularios">
+            <div class="download-icon">
+              <i class="fas fa-download"></i>
+            </div>
+            <div class="form-info">
+              <h3>{{ form.nombre }}</h3>
+            </div>
+            <a [href]="form.url" class="btn-download">
+              <i class="fas fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

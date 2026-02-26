@@ -1,0 +1,473 @@
+/* ===== SECCIÓN PROGRAMA PREKINDER (NUEVA) ===== */
+.programa-prekinder-section {
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  padding: 100px 0 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.programa-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Contenido izquierdo */
+.programa-content {
+  padding-right: 20px;
+}
+
+.programa-title {
+  font-size: 52px;
+  color: #00838f;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.programa-title::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 10px;
+  width: 3px;
+  height: 50px;
+  background: #00bcd4;
+}
+
+.programa-subtitle {
+  font-size: 18px;
+  color: #006064;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  border-left: 4px solid #00bcd4;
+}
+
+.programa-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.btn-conoce-mas {
+  margin-top: 30px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 5px 20px rgba(0, 188, 212, 0.3);
+}
+
+.btn-conoce-mas:hover {
+  background: #00acc1;
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.4);
+}
+
+.btn-conoce-mas i {
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+
+.btn-conoce-mas:hover i {
+  transform: translateX(5px);
+}
+
+/* Imagen derecha */
+.programa-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-circle {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: white;
+  padding: 15px;
+  box-shadow: 0 20px 60px rgba(0, 131, 143, 0.2);
+  z-index: 2;
+}
+
+.circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #00bcd4;
+}
+
+.circle-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Círculos decorativos */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 188, 212, 0.1);
+  z-index: 1;
+}
+
+.circle-1 {
+  width: 400px;
+  height: 400px;
+  top: -50px;
+  right: -30px;
+  background: rgba(0, 188, 212, 0.15);
+}
+
+.circle-2 {
+  width: 300px;
+  height: 300px;
+  bottom: -40px;
+  left: -20px;
+  background: rgba(0, 188, 212, 0.1);
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  right: 20px;
+  background: rgba(0, 188, 212, 0.2);
+}
+
+/* Forma de onda inferior */
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+}
+
+.wave-bottom svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== TUS ESTILOS EXISTENTES ===== */
+
+/* Estilos generales */
+.prekinder-section {
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Títulos */
+.section-title-pink {
+  font-size: 36px;
+  color: #ff6b9d;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.section-title-center {
+  font-size: 42px;
+  color: #ff6b9d;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.dashed-line {
+  width: 60%;
+  height: 3px;
+  background: repeating-linear-gradient(
+    to right,
+    #ffa500 0,
+    #ffa500 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  margin: 0 auto 50px;
+}
+
+/* Sección 1: La Importancia */
+.importance-section {
+  padding: 80px 0;
+}
+
+.importance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.importance-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.importance-image {
+  display: flex;
+  justify-content: center;
+}
+
+.image-frame {
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.image-frame.pink {
+  background: #ff6b9d;
+}
+
+.image-frame.pink img {
+  border-radius: 20px;
+  display: block;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Sección 2: Actividades */
+.activities-section {
+  padding: 80px 0;
+  background: #fffef8;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.activity-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.activity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Bordes de colores */
+.activity-card.pink-border {
+  border: 5px solid #ff6b9d;
+}
+
+.activity-card.teal-border {
+  border: 5px solid #2dd4bf;
+}
+
+.activity-card.orange-border {
+  border: 5px solid #ffa500;
+}
+
+.activity-image {
+  overflow: hidden;
+  height: 250px;
+}
+
+.activity-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.activity-card:hover .activity-image img {
+  transform: scale(1.1);
+}
+
+.activity-card h3 {
+  font-size: 24px;
+  color: #4a6b8a;
+  margin: 20px 15px 10px;
+  font-weight: 600;
+}
+
+.activity-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  padding: 0 15px 20px;
+}
+
+/* Sección 3: Salones */
+.classrooms-section {
+  padding: 80px 0;
+}
+
+.classrooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.classroom-image {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.classroom-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.classroom-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .programa-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .programa-content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .programa-title {
+    font-size: 42px;
+  }
+
+  .programa-title::after {
+    display: none;
+  }
+
+  .programa-subtitle {
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 4px solid #00bcd4;
+    padding-bottom: 15px;
+    display: inline-block;
+  }
+
+  .programa-text p {
+    text-align: left;
+  }
+
+  .image-circle {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  .deco-circle {
+    display: none;
+  }
+
+  .importance-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .importance-image {
+    order: -1;
+  }
+
+  .activities-grid,
+  .classrooms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title-center {
+    font-size: 32px;
+  }
+
+  .section-title-pink {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .programa-prekinder-section {
+    padding: 60px 0 100px;
+  }
+
+  .programa-title {
+    font-size: 36px;
+  }
+
+  .programa-subtitle {
+    font-size: 16px;
+  }
+
+  .programa-text p {
+    font-size: 15px;
+  }
+
+  .image-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-conoce-mas {
+    padding: 14px 30px;
+    font-size: 15px;
+  }
+
+  .importance-section,
+  .activities-section,
+  .classrooms-section {
+    padding: 50px 0;
+  }
+
+  .image-frame img {
+    height: 300px;
+  }
+
+  .activity-image,
+  .classroom-image img {
+    height: 250px;
+  }
+
+  .activity-card h3 {
+    font-size: 20px;
+  }
+
+  .activity-card p {
+    font-size: 14px;
+  }
+}
+
+

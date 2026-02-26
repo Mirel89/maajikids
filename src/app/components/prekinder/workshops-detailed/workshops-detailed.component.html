@@ -1,0 +1,24 @@
+<section class="workshops-detailed">
+  <div class="container">
+    <div *ngFor="let workshop of workshops"
+         class="workshop-container"
+         [class.reverse]="workshop.reverse">
+
+      <!-- Texto -->
+      <div class="workshop-text-content">
+        <h2 class="workshop-title">
+          <span class="title-main">{{ workshop.title }}</span>
+          <span class="title-sub">- {{ workshop.subtitle }}</span>
+        </h2>
+        <p class="workshop-description">{{ workshop.description }}</p>
+      </div>
+
+      <!-- Imagen -->
+      <div class="workshop-image-content">
+        <div class="image-wrapper">
+          <img [src]="workshop.image" [alt]="workshop.title">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
