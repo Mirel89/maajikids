@@ -1,0 +1,209 @@
+.reserva-visita-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reserva-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Columna del Mapa */
+.map-column {
+  position: sticky;
+  top: 100px;
+}
+
+.map-wrapper {
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+}
+
+.map-wrapper iframe {
+  display: block;
+  border-radius: 12px;
+}
+
+/* Columna del Formulario */
+.form-column {
+  padding: 20px 0;
+}
+
+.form-title {
+  font-size: 42px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.form-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Formulario */
+.reserva-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 50px 16px 20px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  border-bottom: 2px solid #e74c3c;
+  font-size: 15px;
+  transition: all 0.3s;
+  background: white;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  outline: none;
+  border-bottom-color: #3498db;
+  background: #f8f9fa;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+/* Iconos a la derecha */
+.input-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.form-group:focus-within .input-icon {
+  color: #3498db;
+}
+
+/* Botón Reservar */
+.btn-reservar {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  align-self: flex-end;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.btn-reservar:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+}
+
+/* WhatsApp Float Button */
+.btn-whatsapp-float {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 30px;
+  transition: all 0.3s;
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-float:hover {
+  background: #128c7e;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp-float i {
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .reserva-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .map-column {
+    position: relative;
+    top: 0;
+  }
+
+  .map-wrapper iframe {
+    height: 350px !important;
+  }
+
+  .form-title {
+    font-size: 32px;
+  }
+
+  .btn-reservar {
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 640px) {
+  .reserva-visita-section {
+    padding: 50px 0;
+  }
+
+  .form-title {
+    font-size: 28px;
+  }
+
+  .form-description {
+    font-size: 14px;
+  }
+
+  .form-input {
+    padding: 14px 45px 14px 16px;
+    font-size: 14px;
+  }
+
+  .input-icon {
+    right: 16px;
+    font-size: 16px;
+  }
+
+  .btn-reservar {
+    padding: 14px 30px;
+    font-size: 15px;
+  }
+
+  .btn-whatsapp-float {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}

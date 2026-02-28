@@ -1,5 +1,5 @@
 .welcome-banner {
-  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  background: linear-gradient(135deg, #e0f7fa 0%, white 100%);
   padding: 80px 0;
   min-height: 600px;
   display: flex;

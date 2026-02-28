@@ -131,8 +131,8 @@
 }
 
 .logo img {
-  width: 70px;
-  height: 60px;
+  width: 150px;
+  height: 90px;
   object-fit: contain;
   border-radius: 50%;
 }
@@ -278,5 +278,28 @@
 
   .logo-sub {
     font-size: 16px;
+  }
+}
+
+.btn-reserva-nav i {
+  font-size: 16px;
+}
+
+/* Ajustar el menú para que se vea bien */
+.nav-menu li {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive - Móvil */
+@media (max-width: 768px) {
+  .btn-reserva-nav {
+    padding: 12px 20px !important;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-reserva-nav span {
+    display: inline;
   }
 }

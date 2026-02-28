@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Infraestructura } from './infraestructura';
+import { WelcomeCloud } from './welcome-cloud';
 
-describe('Infraestructura', () => {
-  let component: Infraestructura;
-  let fixture: ComponentFixture<Infraestructura>;
+describe('WelcomeCloud', () => {
+  let component: WelcomeCloud;
+  let fixture: ComponentFixture<WelcomeCloud>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Infraestructura]
+      imports: [WelcomeCloud]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Infraestructura);
+    fixture = TestBed.createComponent(WelcomeCloud);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

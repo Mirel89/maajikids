@@ -6,6 +6,7 @@ import { TalleresComponent } from './pages/talleres/talleres.component';
 import { AdmisionComponent } from './pages/admision/admision.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ExtranetComponent } from './pages/extranet/extranet.component';
+import { ReservaVisitaPageComponent } from './pages/reserva-visita-page/reserva-visita-page.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,5 +16,6 @@ export const routes: Routes = [
   { path: 'admision', component: AdmisionComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'extranet', component: ExtranetComponent },
+  { path: 'reserva-visita', component: ReservaVisitaPageComponent },
   { path: '**', redirectTo: '' }
 ];

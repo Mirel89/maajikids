@@ -22,31 +22,31 @@ export class ServicesCarouselComponent {
       id: 1,
       title: 'MAAJI ANGELITOS',
       image: 'assets/images/talleres/angelitos.jpg',
-      description: 'Desarrollo integral de habilidades'
+      description: 'Maaji angelitos '
     },
     {
       id: 2,
       title: 'MAAJI GATEADORES',
       image: 'assets/images/talleres/gateadores.jpg',
-      description: 'Terapia del lenguaje'
+      description: 'Maaji gateadores'
     },
     {
       id: 3,
       title: 'MAAJI CAMINADORES',
       image: 'assets/images/talleres/Caminadores.jpg',
-      description: 'Aprendizaje bilingüe'
+      description: 'Maaji caminadores'
     },
     {
       id: 4,
       title: ' MAAJI EXPLORADORES',
       image: 'assets/images/talleres/exploradores.jpg',
-      description: 'Preparación prenatal'
+      description: 'Maaji exploradores'
     },
     {
       id: 5,
       title: 'MAAJI CONVERSADORES',
       image: 'assets/images/talleres/Conversadores.jpg',
-      description: 'Expresión creativa'
+      description: 'Maaji conversadores'
     }
   ];
 
